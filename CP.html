@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"> </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"> </script>
+    <style>
+        #header
+        {
+            width:100%;
+            height:45px;
+            background-color:#EEEDEF;
+            
+            border:2px solid #CECCCE;
+           
+
+        }
+        body{
+            margin:0;
+            padding:0;
+            width:100%;
+        }
+        #run
+        {
+            background-color:#BFBEBF;
+            border-radius:10px;
+            float:right;
+            margin-top:7px;
+            margin-right:12px;
+            border:1px solid black;
+            font-size:120%;
+            
+           
+        }
+           #runB
+        {
+            background-color:#BFBEBF;
+            border-radius:10px;
+            
+            
+           
+           
+            font-size:120%;
+            
+           
+        }
+        #CP{
+            font-family:Arial, Helvetica, sans-serif;
+            padding-left:18px;
+            float:left;
+            font-size:120%;
+            margin-bottom:2px;
+            
+        }
+        #player{
+            width:100%;
+            height:100%;
+        }
+   #buttons
+   {
+    margin: 0 auto;
+    width:263px;
+    font-size:120%;
+    border:3px solid #CECCCE;
+    
+    padding:0;
+    border-radius:3px;
+    height:28px;
+    list-style:none;
+     margin-top:6px;
+     font-family:Arial, Helvetica, sans-serif;
+     position:relative;
+     right:4px;
+   
+      
+}
+
+#buttons li 
+{
+   float:left;
+    border-right :2px solid #CECCCE;
+    padding:3px 11px;
+    background-color: #EEEDEF;
+    
+      
+}
+
+#htmlp{
+    
+    border-right:2px solid #CECCCE;
+   width:25%;
+   height:600px;
+   float:left;
+   color:black;
+   display:none;
+  
+}
+
+#htmllogo{
+    float:right;
+    border: 1px solid #CECCCE;
+    margin-top:5px;
+    margin-right:3px;
+    border-radius:5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:100%;
+    font-weight:bold;
+    padding:5px 5px 5px 5px;
+}
+#cssp{
+display:none;
+    border-right:2px solid #CECCCE;
+   width:25%;
+   height:600px;
+   float:left;
+}
+#csslogo{
+    float:right;
+    border: 1px solid #CECCCE;
+    margin-top:5px;
+    margin-right:3px;
+    border-radius:5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:100%;
+    font-weight:bold;
+    padding:5px 5px 5px 5px;
+    
+}
+#jsp{
+    display:none;
+    border-right:2px solid #CECCCE;
+   width:25%;
+   height:600px;
+   float:left;
+   
+}
+#jslogo{
+    float:right;
+    border: 1px solid #CECCCE;
+    margin-top:5px;
+    margin-right:3px;
+    border-radius:5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:100%;
+    font-weight:bold;
+    padding:5px 5px 5px 5px;
+}
+#resultp{
+    
+    display:none;
+   width:24%;
+   height:600px;
+   float:right;
+   margin-top:10px;
+   margin-left:0;
+   clear:right;
+   
+   
+}
+
+#resultlogo{
+    float:right;
+    border: 1px solid #CECCCE;
+    margin-top:5px;
+    margin-right:3px;
+    border-radius:5px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:100%;
+    font-weight:bold;
+    padding:5px 5px 5px 5px;
+    position:relative;
+    top:-10px;
+   display:none;
+    
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+.plainText{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:100%;
+    font-weight:bold;
+    margin:0;
+    padding:0;
+    clear:both;
+    
+    
+}
+textarea{
+    border:none;
+    width:98%;
+    height:100%;
+    margin:0;
+    
+}
+
+*:focus {
+    outline: none;
+}
+iframe{
+    height:400px;
+}
+
+
+    </style>
+
+    <!--
+    <style id=" cssResult"> 
+     </style>
+   
+
+    "<style>" + css.html + "</style>"-->
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <p id="CP"><b>CodePlayer</b></p>
+            <div id="run"><button id="runB" >RUN</button></div>
+
+            <ul id="buttons">
+                <a  href="#" > <li id="htmltoggle" >HTML</li></a>
+                <a href="#"><li id="csstoggle" >CSS</li></a>
+                <a  href="#" ><li id="jstoggle" >JS</li></a>
+                <a  href="#"> <li id="resulttoggle" style="border:none">Result</li></a>
+</ul>
+        </div>
+        <div id="player">
+            <section   id="htmlp" >
+                <div id="htmllogo" >
+                    HTML
+                </div>
+                <textarea contenteditable="true"id="HTMLTXT"class="plainText"  >HI</textarea>
+            </section>
+            
+            <section id="cssp" >
+                <div id="csslogo">
+                    CSS
+                </div>
+                
+                <textarea contenteditable="true" id="CSSTXT" class="plainText">html{background-color:yellow} </textarea>
+
+            </section>
+            <section id="jsp">
+                <div id="jslogo" >
+                    JS
+                </div>
+                <div contenteditable="true" id="JSTXT"class="plainText" >alert('hiii');</div>
+            </section>
+            
+            <section  id="resultp">
+                <div id="resultlogo">
+                    RESULT
+                </div>
+                <iframe style="border:none"id="RESULTTXT"class="plainText">
+                    
+                </iframe>
+                
+                
+
+            </section>
+
+
+        </div>
+            
+        
+
+    </div>
+    <script>
+        
+        var HTMLclicks = 0;
+        var CSSclicks = 0;
+        var JSclicks = 0;
+        var RESULTclicks = 0;
+
+        $("#htmltoggle").click(function () {
+            
+            if (HTMLclicks % 2 == 0) {
+                $("#htmlp").show();
+                $("#htmltoggle").css("background", 'darkgray');
+
+            } else {
+
+                $("#htmltoggle").css("background", '#EEEDEF');
+                $("#htmlp").hide();
+            }
+            HTMLclicks = HTMLclicks + 1;
+        });
+
+        $("#csstoggle").click(function () {
+
+            if (CSSclicks % 2 == 0) {
+                $("#cssp").show();
+                $("#csstoggle").css("background", 'darkgray');
+
+            } else {
+
+                $("#csstoggle").css("background", '#EEEDEF');
+                $("#cssp").hide();
+            }
+            CSSclicks = CSSclicks + 1;
+        });
+
+        $("#jstoggle").click(function () {
+
+            if (JSclicks % 2 == 0) {
+                $("#jsp").show();
+                $("#jstoggle").css("background", 'darkgray');
+
+            } else {
+
+                $("#jstoggle").css("background", '#EEEDEF');
+                $("#jsp").hide();
+            }
+            JSclicks = JSclicks + 1;
+        });
+
+        $("#resulttoggle").click(function () {
+
+            if (RESULTclicks % 2 == 0) {
+                $("#resultp").show();
+                $("#resultlogo").show();
+                $("#resulttoggle").css("background", 'darkgray');
+
+            } else {
+
+                $("#resulttoggle").css("background", '#EEEDEF');
+                $("#resultp").hide();
+                $("#resultlogo").hide();
+
+
+            }
+            RESULTclicks = RESULTclicks + 1;
+        });
+        
+
+        $("#runB").click(function () {
+            //done : alerts the data when it is returned -call back fxn
+               /* var HTMLxmp = document.getElementById("HTMLTXT").value;
+                //var CSScontent = document.getElementById("CSSTXT").value;
+                //var JScontent = document.getElementById("JSTXT").value;
+                var contentHTML = $('#HTMLTXT').html();
+                var contentCSS = $('#CSSTXT').html();
+                var contentJS = $('#JSTXT').html();
+
+
+                
+                alert("HTML");
+                $("#RESULTTXT").html(contentHTML);
+                alert("CSS");
+                $("#RESULTTXT").html(contentCSS);
+                alert("JS");
+                $("#RESULTTXT").html(contentJS);*/
+
+                $("iframe").contents().find("html").html('<style>'+$("#CSSTXT").val()+'</style>'+$("#HTMLTXT").val());
+            // $("iframe").contents().find("html").html($("#HTMLTXT").val());
+
+                document.getElementById('RESULTTXT').contentWindow.eval($('#JSTXT').val());
+
+                
+                
+             
+                
+        });
+        
+        
+
+       
+        
+                
+       
+            
+           
+        
+        
+    </script>
+  
+</body>
+</html>
